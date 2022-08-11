@@ -6,10 +6,10 @@ const bookingRouter = require('./booking');
 app.use(bodyParser.json({ extended: true }));
 
 
-// app.get('/', (req, res) => {
-//     res.json('Hello world')
-//     console.log('database', db)
-// })
+app.get('/', (req, res) => {
+    res.json('Hello world')
+        // console.log('database', db)
+})
 
 // app.post('/The-Booking', (req, res) => {
 //     console.log(req.body)
@@ -20,8 +20,8 @@ app.use(express.json());
 
 app.use('/The-Booking', bookingRouter);
 
-
-app.listen(3000, () => {
-    console.log('App is running on port 3000')
+const port = process.env['PORT'] || 5001
+app.listen(port, () => {
+    console.log('App is running on port 3000', port);
     connectToDb()
 })

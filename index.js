@@ -11,6 +11,11 @@ app.get('/', (req, res) => {
         // console.log('database', db)
 })
 
+app.get('/', (req, res) => {
+    res.json('Hello world')
+    // console.log('database', db)
+})
+
 // app.post('/The-Booking', (req, res) => {
 //     console.log(req.body)
 //     res.status(200);

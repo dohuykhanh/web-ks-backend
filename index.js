@@ -3,17 +3,19 @@ const app = express();
 const bodyParser = require('body-parser');
 const { connectToDb, db } = require('./db');
 const bookingRouter = require('./booking');
+var cors = require('cors');
+app.use(cors());
 app.use(bodyParser.json({ extended: true }));
 
+
+// app.get('/', (req, res) => {
+//     res.json('Hello world')
+//         // console.log('database', db)
+// })
 
 app.get('/', (req, res) => {
     res.json('Hello world')
         // console.log('database', db)
-})
-
-app.get('/', (req, res) => {
-    res.json('Hello world')
-    // console.log('database', db)
 })
 
 // app.post('/The-Booking', (req, res) => {

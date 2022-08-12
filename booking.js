@@ -5,8 +5,8 @@ const { db } = require('./db')
 
 bookingRounter.post('/', async(req, res) => {
     const bills = {
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
+        firtname: req.body.firtname,
+        lastname: req.body.lastname,
         soluongnguoi: req.body.soluongnguoi,
         gmail: req.body.gmail,
         sdt: req.body.sdt,
